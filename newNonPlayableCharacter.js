@@ -26,29 +26,28 @@ function newNonPlayableCharacter(x, y) {
     async function walkEast(time) {
         direction = 'east'
         element.src = `./assets/red-character/east.gif`
-        await sleep (time)
+        await sleep(time)
         stop()
-        
     }
     
-    async function walkNorth() {
+    async function walkNorth(time) {
         direction = 'north'
         element.src = `./assets/red-character/north.gif`
-        await sleep (time)
+        await sleep(time)
         stop()
     }
 
-    async function walkWest() {
+    async function walkWest(time) {
         direction = 'west'
         element.src = `./assets/red-character/west.gif`
-        await sleep (time)
+        await sleep(time)
         stop()
     }
 
-    async function walkSouth() {
+    async function walkSouth(time) {
         direction = 'south'
         element.src = `./assets/red-character/south.gif`
-        await sleep (time)
+        await sleep(time)
         stop()
     }
 
@@ -67,7 +66,7 @@ function newNonPlayableCharacter(x, y) {
     }
 }
 function sleep(time) {
-    return new Promise (resolve => {
+    return new Promise(resolve => {
         setTimeout(resolve, time)
     })  
 }
